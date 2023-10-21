@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculator(a,b,operator) {
+            var result;
+            switch(operator) {
+                case "+":
+                    result=a+b;
+                    result=+result;
+                    break;
+                case "-":
+                    result=a-b;
+                    break;
+                case "*":
+                    result=a*b;
+                    break;
+                case "/":
+                    result=a/b;
+                    break;
+                default:
+                alert("invalid operator");
+            }
+            return result;
+        }
+        var a=prompt("enter the first number:");
+        if (a>=0 || a<0) {
+            a=+a;
+        }
+        else {
+            alert("it is string");
+        }
+        var b=prompt("enter the second number:");
+        if (b>=0 || b<0) {
+            b=+b;
+        }
+        else {
+            alert("it is string");
+        }
+        var operator=prompt("enter the operator:");
+        document.write(calculator(a,b,operator));
+    </script>
+</body>
+</html>
